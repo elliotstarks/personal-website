@@ -1,0 +1,63 @@
+﻿@page "/about"
+
+<h1>Profile</h1>
+
+<p>Full Stack .NET Developer</p>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>About Me</h2>
+        <p>
+            I'm a well-rounded developer with a passion for creating software, websites, and mobile apps.
+            I've learned from experience that spending the time to research best practices and build things right is vital to any project,
+            but that doesn't mean I can't whip up a quick script to save the day. Whether fixing bugs, optimizing databases, all the way up to engineering
+            large scale applications, I'm always focused on doing things right. I love working on a team and have experience with Agile methodologies.
+            I've also worked extensively with clients to analyze their needs, spec and quote out solutions, and implement those solutions with ongoing support.
+        </p>
+    </div>
+
+    <div class="col-md-4" style="text-align: center;">
+        <img src="/images/avatar.png" alt="Elliot Starks portrait" width="254" height="254" />
+    </div>
+
+    <div class="col-md-4">
+        <h2>Details</h2>
+        <dl>
+            <dt>Name</dt>
+            <dd>Elliot Starks</dd>
+
+            <dt>Age</dt>
+            <dd>@Age</dd>
+
+            <dt>Location</dt>
+            <dd>Bellingham, WA</dd>
+
+            <dt>Family</dt>
+            <dd>My wife, Ashley, and two children, Madeleine and Theodore</dd>
+
+            <dt>Interests</dt>
+            <dd>Guitar & Drums, Cooking, Yoga & Meditation, Gaming</dd>
+        </dl>
+    </div>
+</div>
+
+@code {
+    public int Age
+    {
+        get
+        {
+            var birthday = new DateTime(1984, 10, 6);
+            var today = DateTime.Now;
+            var age = today.Year - birthday.Year;
+            
+            if (birthday.Date > today.AddYears(-age))
+            {
+                age--;
+            }
+
+            return age;
+        }
+    }
+}
