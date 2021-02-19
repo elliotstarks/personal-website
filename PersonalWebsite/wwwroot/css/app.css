@@ -1,6 +1,8 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 :root {
+    --color-background-grey: #efefef;
+
     --color-primary: #236969;
     --color-primary-light: #679D9D;
     --color-primary-medium-light: #3F8282;
@@ -37,7 +39,7 @@ a, .btn-link {
 }
 
 .content {
-    min-height: 60vh;
+    min-height: 100vh;
     padding-top: 1.1rem;
 }
 

@@ -1,0 +1,47 @@
+﻿
+:root {
+    --sunburst-stroke-width: 5;
+    --sunburst-circle-stroke-width: 5;
+}
+
+.landing-image {
+    width: 100%;
+}
+
+.sunburst-circle {
+    r: 50%;
+    animation: ripple ease-in-out 1s alternate;
+}
+
+@keyframes ripple {
+    from {
+        r: 5%;
+    }
+    to {
+        r: 50%;
+    }
+}
+
+.sunburst-line {
+    stroke: var(--color-primary);
+    stroke-width: var(--sunburst-stroke-width);
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    animation: draw ease-in-out 5s forwards;
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 100%;
+    }
+
+    to {
+        stroke-dashoffset: 0%;
+    }
+}
+
+@media (min-width: 641px) {
+    .landing-image {
+        max-height: 100vh;
+    }
+}
