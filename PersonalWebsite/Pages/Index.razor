@@ -8,16 +8,27 @@
                                          a 100,100 0 0,1 250,0" />
             </defs>
 
-            <circle class="sunburst-circle" id="sunburstCircle1" cx="200" cy="200" r="150" fill="var(--color-secondary-2)" />
-            <circle class="sunburst-circle" id="sunburstCircle2" cx="200" cy="200" r="150" fill="var(--color-background-grey)" />
-            <circle class="sunburst-circle" id="sunburstCircle3" cx="200" cy="200" r="150" fill="var(--color-secondary-1)" />
-
-            <g>
+            <g id="rippleCircles">
+                <circle class="sunburst-circle" id="sunburstCircle1" cx="200" cy="200" r="150" fill="var(--color-secondary-2)" />
+                <circle class="sunburst-circle" id="sunburstCircle2" cx="200" cy="200" r="150" fill="var(--color-background-grey)" />
+                <circle class="sunburst-circle" id="sunburstCircle3" cx="200" cy="200" r="150" 
+                        fill="var(--color-secondary-1)" stroke="var(--color-secondary-2)" stroke-width="10" />
+            </g>
+            
+            <g id="circleText">
                 <use xlink:href="#circlePath" fill="none" />
-                <text font-size="2em" fill="var(--color-background-grey)">
+                <text class="circle-text" font-size="2em" fill="var(--color-background-grey)">
                     <textPath xlink:href="#circlePath" text-anchor="middle" startOffset="50%">Welcome to the homepage!</textPath>
                 </text>
             </g>
+           
+            <g id="innerCircle">
+                <circle class="inner-circle" cx="200" cy="200" r="100" fill="var(--color-secondary-2)"></circle>
+                <svg fill="var(--color-background-grey)" x="125" y="120" width="150" height="150">
+                    <use xlink:href="#icon-home"></use>
+                </svg>
+            </g>
+
             @*<line class="sunburst-line" x1="0" y1="0" x2="0" y2="-200" />
         <line class="sunburst-line" x1="0" y1="0" x2="200" y2="-200" />
         <line class="sunburst-line" x1="0" y1="0" x2="200" y2="0" />
