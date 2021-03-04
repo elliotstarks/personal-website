@@ -1,42 +1,35 @@
 ﻿@page "/"
 
-<div class="container">
-    <div class="row">
-        <svg class="landing-image" viewBox="0 0 400 400">
-            <defs>
-                <path id="circlePath" d="M 75,200
-                                         a 100,100 0 0,1 250,0" />
-            </defs>
-
-            <g id="rippleCircles">
-                <circle class="sunburst-circle" id="sunburstCircle1" cx="200" cy="200" r="150" fill="var(--color-secondary-2)" />
-                <circle class="sunburst-circle" id="sunburstCircle2" cx="200" cy="200" r="150" fill="var(--color-background-grey)" />
-                <circle class="sunburst-circle" id="sunburstCircle3" cx="200" cy="200" r="150" 
-                        fill="var(--color-secondary-1)" stroke="var(--color-secondary-2)" stroke-width="10" />
-            </g>
+<svg class="landing-image" viewBox="0 0 400 400">
             
-            <g id="circleText">
-                <use xlink:href="#circlePath" fill="none" />
-                <text class="circle-text" font-size="2em" fill="var(--color-background-grey)">
-                    <textPath xlink:href="#circlePath" text-anchor="middle" startOffset="50%">Welcome to the homepage!</textPath>
-                </text>
-            </g>
-           
-            <g id="innerCircle">
-                <circle class="inner-circle" cx="200" cy="200" r="100" fill="var(--color-secondary-2)"></circle>
-                <svg fill="var(--color-background-grey)" x="125" y="120" width="150" height="150">
-                    <use xlink:href="#icon-home"></use>
-                </svg>
-            </g>
+    <defs>
+        <path id="circlePath" d="M 75,200 a 100,100 0 0,1 250,0" />
+        <path id="circlePathUnderline" d="M 85,200 a 100,100 0 0,1 230,0" />
+    </defs>
 
-            @*<line class="sunburst-line" x1="0" y1="0" x2="0" y2="-200" />
-        <line class="sunburst-line" x1="0" y1="0" x2="200" y2="-200" />
-        <line class="sunburst-line" x1="0" y1="0" x2="200" y2="0" />
-        <line class="sunburst-line" x1="0" y1="0" x2="200" y2="200" />
-        <line class="sunburst-line" x1="0" y1="0" x2="0" y2="200" />
-        <line class="sunburst-line" x1="0" y1="0" x2="-200" y2="200" />
-        <line class="sunburst-line" x1="0" y1="0" x2="-200" y2="-200" />
-        <line class="sunburst-line" x1="0" y1="0" x2="-200" y2="0" />*@
+    <g id="rippleCircles">
+        <circle class="sunburst-circle" id="sunburstCircle1" cx="50%" cy="50%" r="45%" 
+                fill="var(--color-secondary-2)" stroke="var(--color-secondary-2)" stroke-width="10" />
+        @*<circle class="sunburst-circle" id="sunburstCircle2" cx="50%" cy="50%" r="45%" 
+                fill="var(--color-background-grey)" />*@
+        <circle class="sunburst-circle" id="sunburstCircle2" cx="50%" cy="50%" r="45%" 
+                fill="var(--color-secondary-1)" stroke="var(--color-secondary-2)" stroke-width="10" />
+    </g>
+            
+    <g id="circleText">
+        <use xlink:href="#circlePathUnderline" fill="none" />
+        <text class="circle-text" font-size="2em" fill="var(--color-background-grey)">
+            <textPath xlink:href="#circlePath" text-anchor="middle" startOffset="50%">
+                Welcome to the homepage!
+            </textPath>
+        </text>
+    </g>
+           
+    <g id="innerCircle">
+        <circle class="inner-circle" cx="50%" cy="50%" r="20%" fill="var(--color-secondary-2)" />
+        <svg fill="var(--color-background-grey)" x="125" y="120" width="150" height="150">
+            <use id="innerIcon" xlink:href="#icon-home"></use>
         </svg>
-    </div>
-</div>
+    </g>
+
+</svg>
