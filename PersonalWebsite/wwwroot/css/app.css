@@ -1,8 +1,6 @@
-﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
-
+﻿
 :root {
     --color-background-grey: #efefef;
-
     --color-primary: #236969;
     --color-primary-light: #679D9D;
     --color-primary-medium-light: #3F8282;
@@ -18,15 +16,18 @@
     --color-secondary-2-medium-light: #91C35F;
     --color-secondary-2-medium-dark: #497B16;
     --color-secondary-2-dark: #2B5401;
-
     --spinner-left: 55%;
-    --spinner-app-left: 48%
+    --spinner-app-left: 48%;
+    --loading-text-left: 44%;
+    --loading-text-left-wide: 42%;
 }
 
 @media screen and (max-width: 640px) {
     :root {
         --spinner-left: 42%;
-        --spinner-app-left: 41%
+        --spinner-app-left: 41%;
+        --loading-text-left: 22%;
+        --loading-text-left-wide: 18%;
     }
 }
 
@@ -82,7 +83,7 @@ a, .btn-link {
     height: 80px;
     animation: spin 700ms linear infinite;
     top: 40%;
-    left: var(--spinner-left);
+    left: 35%;
     position: absolute;
 }
 
@@ -97,5 +98,71 @@ a, .btn-link {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+.loading-text-container {
+    position: absolute;
+    top: 53%;
+    left: var(--loading-text-left);
+    display: flex;
+    justify-content: center;
+}
+
+.loading-text {
+    overflow: hidden;
+    border-right: .15em solid var(--color-secondary-2);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+}
+
+#loadingText1 {
+    width: 0;
+    border-color: transparent;
+    animation: typing 3s steps(40, end) 1.5s forwards, 
+               blink-caret .75s step-end 1.5s infinite,
+               disappear 1s steps(20, end) 6s forwards;
+}
+
+#loadingText2 {
+    width: 0;
+    border-color: transparent;
+    animation: typing 3s steps(40, end) 7s forwards, 
+               blink-caret .75s step-end 7s infinite;
+}
+
+.loading-text-container__wide {
+    left: var(--loading-text-left-wide);
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--color-secondary-2);
+    }
+}
+
+@keyframes disappear {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+        border-color: transparent;
     }
 }

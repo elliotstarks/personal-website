@@ -7,12 +7,12 @@
     r: 0;
     animation-name: ripple;
     animation-timing-function: ease;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
 
 #sunburstCircle2 {
-    animation-delay: 0.75s;
+    animation-delay: 0.4s;
 }
 
 /*#sunburstCircle3 {
@@ -45,7 +45,7 @@
     animation-duration: 1.25s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
-    animation-delay: 3s;
+    animation-delay: 1.5s;
 }
 
 @keyframes draw {
@@ -63,7 +63,7 @@
     animation-name: fade-in;
     animation-timing-function: linear;
     animation-duration: 1.5s;
-    animation-delay: 3s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
 }
 

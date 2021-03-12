@@ -1,5 +1,13 @@
 ﻿@page "/"
 
+@*<div class="spinner spinner__app"></div>
+<div class="loading-text-container">
+    <div id="loadingText1" class="loading-text">Loading components...</div>
+</div>
+<div class="loading-text-container loading-text-container__wide">
+    <div id="loadingText2" class="loading-text">Is this running on a potato...?</div>
+</div>*@
+
 <svg class="landing-image" viewBox="0 0 400 400">
             
     <defs>
@@ -10,8 +18,8 @@
     <g id="rippleCircles">
         <circle class="sunburst-circle" id="sunburstCircle1" cx="50%" cy="50%" r="45%" 
                 fill="var(--color-secondary-2)" stroke="var(--color-secondary-2)" stroke-width="10" />
-        @*<circle class="sunburst-circle" id="sunburstCircle2" cx="50%" cy="50%" r="45%" 
-                fill="var(--color-background-grey)" />*@
+        <circle class="sunburst-circle" id="sunburstCircle2" cx="50%" cy="50%" r="45%" 
+                fill="var(--color-background-grey)" />
         <circle class="sunburst-circle" id="sunburstCircle2" cx="50%" cy="50%" r="45%" 
                 fill="var(--color-secondary-1)" stroke="var(--color-secondary-2)" stroke-width="10" />
     </g>
