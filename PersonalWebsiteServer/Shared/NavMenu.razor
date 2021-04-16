@@ -1,0 +1,71 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">Elliot Starks</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <svg class="icon mr-3">
+                    <use xlink:href="#icon-home"></use>
+                </svg>
+                <span>Home</span>
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="about">
+                <svg class="icon mr-3">
+                    <use xlink:href="#icon-user"></use>
+                </svg>
+                <span>About</span>
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="blog">
+                <svg class="icon mr-3">
+                    <use xlink:href="#icon-book"></use>
+                </svg>
+                <span>Blog</span>
+            </NavLink>
+        </li>
+    </ul>
+    <div class="nav-footer w-100">
+        <ul class="nav flex-row justify-content-around">
+            <li class="nav-item text-center">
+                <a href="mailto:elliotstarks@gmail.com" class="nav-link">
+                    <svg class="icon">
+                        <use xlink:href="#icon-envelope"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="nav-item text-center">
+                <a href="https://github.com/elliotstarks" target="_blank" class="nav-link">
+                    <svg class="icon">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="nav-item text-center">
+                <a href="https://www.linkedin.com/in/elliot-starks-b267b48b/" target="_blank" class="nav-link">
+                    <svg class="icon">
+                        <use xlink:href="#icon-linkedin"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

@@ -1,0 +1,53 @@
+﻿@page "/blog"
+
+<h1>Blog</h1>
+
+@if (Blogs == null)
+{
+    <div class="spinner"></div>
+}
+else if (!Blogs.Any())
+{
+    <p><em>Surprise! Nothing here yet...</em></p>
+}
+else
+{
+    foreach (var blog in Blogs)
+    {
+        <h2>@blog.Title</h2>
+        <div class="col-form-label-sm">@blog.Date.ToString("D")</div>
+        <p>@blog.Content</p>
+    }
+}
+
+@code {
+    public List<BlogEntry> Blogs;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Run(LoadBlogs);
+    }
+
+    private void LoadBlogs()
+    {
+        Blogs = new List<BlogEntry>();
+
+        //var testBlog = new BlogEntry()
+        //{
+        //    Date = DateTime.Now,
+        //    Title = "Test Blog",
+        //    Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        //};
+
+        //Blogs.Add(testBlog);
+    }
+
+    public class BlogEntry
+    {
+        public DateTime Date { get; set; }
+
+        public string Title { get; set; }
+
+        public string Content { get; set; }
+    }
+}
