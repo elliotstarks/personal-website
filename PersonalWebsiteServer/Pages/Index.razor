@@ -1,43 +1,63 @@
 ﻿@page "/"
 
-@*<div class="spinner spinner__app"></div>
-<div class="loading-text-container">
-    <div id="loadingText1" class="loading-text">Loading components...</div>
-</div>
-<div class="loading-text-container loading-text-container__wide">
-    <div id="loadingText2" class="loading-text">Is this running on a potato...?</div>
-</div>*@
+<div class="row">
 
-<svg class="landing-image" viewBox="0 0 400 400">
-            
-    <defs>
-        <path id="circlePath" d="M 75,200 a 100,100 0 0,1 250,0" />
-        <path id="circlePathUnderline" d="M 85,200 a 100,100 0 0,1 230,0" />
-    </defs>
+    <div class="landing-image-container col-lg-6">
+        <svg class="landing-image" viewBox="0 0 400 400">
 
-    <g id="rippleCircles">
-        <circle class="sunburst-circle" id="sunburstCircle1" cx="50%" cy="50%" r="45%" 
-                fill="var(--color-secondary-2)" stroke="var(--color-secondary-2)" stroke-width="10" />
-        <circle class="sunburst-circle" id="sunburstCircle2" cx="50%" cy="50%" r="45%" 
-                fill="var(--color-background-grey)" />
-        <circle class="sunburst-circle" id="sunburstCircle2" cx="50%" cy="50%" r="45%" 
-                fill="var(--color-secondary-1)" stroke="var(--color-secondary-2)" stroke-width="10" />
-    </g>
-            
-    <g id="circleText">
-        <use xlink:href="#circlePathUnderline" fill="none" />
-        <text class="circle-text" font-size="2em" fill="var(--color-background-grey)">
-            <textPath xlink:href="#circlePath" text-anchor="middle" startOffset="50%">
-                Welcome to the homepage!
-            </textPath>
-        </text>
-    </g>
-           
-    <g id="innerCircle">
-        <circle class="inner-circle" cx="50%" cy="50%" r="20%" fill="var(--color-secondary-2)" />
-        <svg fill="var(--color-background-grey)" x="125" y="120" width="150" height="150">
-            <use id="innerIcon" xlink:href="#icon-home"></use>
+            <defs>
+                <path id="circlePath" d="M 75,200 a 100,100 0 0,1 250,0" />
+                <path id="circlePathUnderline" d="M 85,200 a 100,100 0 0,1 230,0" />
+            </defs>
+
+            <g id="rippleCircles">
+                <circle class="sunburst-circle" id="sunburstCircle1" cx="50%" cy="50%" r="45%"
+                        fill="var(--color-secondary-2)" stroke="var(--color-secondary-2)" stroke-width="10" />
+                <circle class="sunburst-circle" id="sunburstCircle2" cx="50%" cy="50%" r="45%"
+                        fill="var(--color-background-grey)" />
+                <circle class="sunburst-circle" id="sunburstCircle2" cx="50%" cy="50%" r="45%"
+                        fill="var(--color-secondary-1)" stroke="var(--color-secondary-2)" stroke-width="10" />
+            </g>
+
+            <g id="circleText">
+                <use xlink:href="#circlePathUnderline" fill="none" />
+                <text class="circle-text" font-size="1.9em" fill="var(--color-background-grey)">
+                    <textPath xlink:href="#circlePath" text-anchor="middle" startOffset="50%">
+                        Welcome to the homepage!
+                    </textPath>
+                </text>
+            </g>
+
+            <g id="innerCircle">
+                <circle class="inner-circle" cx="50%" cy="50%" r="20%" fill="var(--color-secondary-2)" />
+                <svg fill="var(--color-background-grey)" x="125" y="120" width="150" height="150">
+                    <use id="innerIcon" xlink:href="#icon-home"></use>
+                </svg>
+            </g>
+
         </svg>
-    </g>
+    </div>
 
-</svg>
+
+    <div class="col-lg-6 mt-5">
+        <h2 class="hello-header">
+            <svg class="hello-icon">
+                <use xlink:href="#icon-hand-peace-o"></use>
+            </svg>
+            <span>Hi, I'm Elliot.</span>
+            <br />
+            <br />
+            <span class="ml-5">I came here to write code and break stuff... </span>
+            <br />
+            <br />
+            <span>...and I'm all done breaking stuff.</span>
+        </h2>
+        <svg class="hello-background-container" viewBox="0 0 250 200">
+            <polygon class="hello-background" points="0,0 120,0 50,180 200,200"></polygon>
+            <polygon class="hello-background" points="10,20 120,20 10,180 240,220"></polygon>
+            <polygon class="hello-background" points="10,80 120,60 250,120"></polygon>
+            <polygon class="hello-background" points="200,20 80,60 80,180 0,120"></polygon>
+        </svg>
+    </div>
+
+</div>

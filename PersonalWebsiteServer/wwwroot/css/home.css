@@ -1,4 +1,36 @@
 ﻿
+.hello-header {
+    line-height: 4rem;
+    font-weight: bold;
+}
+
+.hello-header > span:last-child {
+    margin-left: 80px;
+}
+
+.hello-icon {
+    width: 4rem;
+    height: 4rem;
+    fill: var(--color-secondary-2);
+}
+
+.hello-background-container {
+    position: absolute;
+    top: -20px;
+    left: -80px;
+    z-index: 1;
+}
+
+.hello-background {
+    fill: var(--color-background-grey-dark);
+    fill-opacity: 0.18;
+    fill-rule: nonzero;
+}
+
+.landing-image-container {
+    z-index: 2;
+}
+
 .landing-image {
     width: 100%;
 }
@@ -107,3 +139,8 @@
     }
 }*/
 
+@media (min-width: 641px) {
+    /*.landing-image {
+        width: 50%;
+    }*/
+}

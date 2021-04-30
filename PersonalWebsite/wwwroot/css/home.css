@@ -107,3 +107,8 @@
     }
 }*/
 
+@media (min-width: 641px) {
+    .landing-image {
+        width: 50%;
+    }
+}

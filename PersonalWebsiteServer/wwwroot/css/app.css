@@ -1,6 +1,7 @@
 ﻿
 :root {
     --color-background-grey: #efefef;
+    --color-background-grey-dark: #b8b8b8;
     --color-primary: #236969;
     --color-primary-light: #679D9D;
     --color-primary-medium-light: #3F8282;
@@ -32,7 +33,7 @@
 }
 
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a, .btn-link {
